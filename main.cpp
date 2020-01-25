@@ -2,41 +2,7 @@
 #include <string>
 using namespace std;
 
-#include "Lab1Tests.hpp"
-//
-//string get_status_str(bool status)
-//{
-//    return status ? "Pass" : "Fail";
-//}
-//
-//int main()
-//{
-//    SequentialListTest seq_test;
-//    DoublyLinkedListTest linked_test;
-//
-//    bool seq_test1_passed = seq_test.test1();
-//    bool seq_test2_passed = seq_test.test2();
-//    bool seq_test3_passed = seq_test.test3();
-//
-//    bool linked_test1_passed = linked_test.test1();
-//    bool linked_test2_passed = linked_test.test2();
-//    bool linked_test3_passed = linked_test.test3();
-//
-//    cout << "---Sequential List Tests---" << endl;
-//    cout << "Test1: " << get_status_str(seq_test1_passed) << endl;
-//    cout << "Test2: " << get_status_str(seq_test2_passed) << endl;
-//    cout << "Test3: " << get_status_str(seq_test3_passed) << endl;
-//    cout << endl;
-//    cout << "---Linked List Tests---" << endl;
-//    cout << "Test1: " << get_status_str(linked_test1_passed) << endl;
-//    cout << "Test2: " << get_status_str(linked_test2_passed) << endl;
-//    cout << "Test3: " << get_status_str(linked_test3_passed) << endl;
-//
-//    system("pause");
-//}
-
-//#ifndef LAB1_TESTS_HPP
-//#define LAB1_TESTS_HPP
+#include "Test.hpp"
 
 #define ASSERT_TRUE(T) if (!(T)) return false;
 #define ASSERT_FALSE(T) if ((T)) return false;
@@ -78,11 +44,8 @@ int main()
     seq_test_results[5] = seq_test.test6();
     seq_test_results[6] = seq_test.test7();
     seq_test_results[7] = seq_test.test8();
-    seq_test_results[8] = seq_test.test9();  //this test is failing (it passes right now because I've commented stuff out), needs to be worked on
+    seq_test_results[8] = seq_test.test9();
     seq_test_results[9] = seq_test.test10();
-
-//    seq_test_results[10] = seq_test.test11();   // these two tests don't apply since we don't have the sort functions
-//    seq_test_results[11] = seq_test.test12();
 
 	cout << "SEQUENTIAL LIST TESTING RESULTS \n";
 	cout << "******************************* \n";
@@ -105,7 +68,7 @@ int main()
       "Test11: insert and remove for sorted list in ascending order",
       "Test12: insert and remove for sorted list in descending order"
 	};
-
+	
 	bool linked_test_results[12];
     linked_test_results[0] = linked_test.test1();
     linked_test_results[1] = linked_test.test2();
@@ -113,13 +76,10 @@ int main()
     linked_test_results[3] = linked_test.test4();
     linked_test_results[4] = linked_test.test5();
     linked_test_results[5] = linked_test.test6();
-    linked_test_results[6] = linked_test.test7();   //these commented tests are leading to error-like program shuts
-    linked_test_results[7] = linked_test.test8();	  //down so there's probably an infinite loop or its trying to
-    linked_test_results[8] = linked_test.test9();   //get a pointer that doesn't exist
+    linked_test_results[6] = linked_test.test7();
+    linked_test_results[7] = linked_test.test8();
+    linked_test_results[8] = linked_test.test9();
 	  linked_test_results[9] = linked_test.test10();
-
-//    linked_test_results[10] = linked_test.test11();  // these two tests don't apply since we don't have the sort functions
-//    linked_test_results[11] = linked_test.test12();
 
 
 	cout << "DOUBLY LINKED LIST TESTING RESULTS \n";
